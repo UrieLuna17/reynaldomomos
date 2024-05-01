@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">
-    <script src="//code.tidio.co/by59x9ifcu419vi320ktvfrl8plpuefs.js" async></script>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio - Nutriser</title>
+    <title>Iniciar Sesión - Nutriser</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -13,7 +12,7 @@
             background-color: #f4f4f4;
         }
         .navbar {
-            background-color: #016565;
+            background-color: #016565; /* Cambio de color */
             overflow: hidden;
             border-radius: 8px;
             margin-bottom: 20px;
@@ -33,11 +32,11 @@
             text-decoration: none;
         }
         .navbar a:hover {
-            background-color: #016565;
+            background-color: #005151; /* Cambio de color */
         }
         .container {
-            max-width: 800px;
-            margin: 0 auto;
+            max-width: 400px;
+            margin: 20px auto;
             padding: 20px;
             background-color: #fff;
             border-radius: 8px;
@@ -47,35 +46,53 @@
             text-align: center;
             color: #333;
         }
-        p {
-            text-align: justify;
-            margin-bottom: 20px;
-        }
-        img.logo {
+        label {
             display: block;
-            margin: 0 auto;
-            max-width: 300px;
-            height: auto;
+            margin-bottom: 10px;
+            color: #555;
+        }
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            background-color: #007bff;
+            color: #fff;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
         }
     </style>
 </head>
 <body>
 
-    <div class="navbar">
-        <a href="Inicio.html">Inicio</a>
+<div class="navbar">
+    <a href="Inicio.html">Inicio</a>
         <a href="registro.html">Registro</a>
         <a href="agendar_cita.php">Agendar Cita</a>
         <a href="Expertos.html">Nuestros expertos destacados</a>
-    </div>
+</div>
 
 <div class="container">
-    <h1>Bienvenido a Nutriser</h1>
-    <img src="banner.png" alt="Nutriser Logo" class="logo">
-    <h2>Misión</h2>
-    <p>Nuestra misión en Nutriser es proporcionar a nuestros clientes un servicio de nutrición integral y personalizado para ayudarlos a alcanzar sus objetivos de salud y bienestar.</p>
-
-    <h2>Visión</h2>
-    <p>Nuestra visión en Nutriser es convertirnos en un referente en el campo de la nutrición, brindando atención de calidad y contribuyendo al bienestar de la sociedad.</p>
+    <h1>Iniciar Sesión - Nutriser</h1>
+    <form action="Inicio_sesion.php" method="post">
+        <label for="email">Correo electrónico:</label>
+        <input type="text" id="email" name="email" required>
+        
+        <label for="password">Contraseña:</label>
+        <input type="password" id="password" name="password" required>
+        
+        <input type="submit" value="Iniciar Sesión">
+    </form>
 </div>
 
 </body>
